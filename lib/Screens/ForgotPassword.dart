@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-//import 'package:patient_portal/main.dart';
+//import 'package:patient_portal/Screens/LoginScreen.dart';
 
 class ForgotPassword extends StatefulWidget {
+  static const String id = "Forgot_Password_Screen";
   @override
   _ForgotPasswordState createState() => _ForgotPasswordState();
 }
@@ -34,26 +35,27 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("Username",
+                Text("Email",
                     style: TextStyle(
                         fontFamily: "Poppins-Medium",
                         fontSize: ScreenUtil.getInstance().setSp(45))),
                 TextField(
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                      hintText: "enter username",
+                      hintText: "enter email",
                       hintStyle: TextStyle(color: Colors.grey, fontSize: 15.0)),
                 ),
                 SizedBox(
                   height: ScreenUtil.getInstance().setHeight(30),
                 ),
-                Text("Password",
+                Text("Username",
                     style: TextStyle(
                         fontFamily: "Poppins-Medium",
                         fontSize: ScreenUtil.getInstance().setSp(45))),
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                      hintText: "enter password",
+                      hintText: "enter username",
                       hintStyle: TextStyle(color: Colors.grey, fontSize: 15.0)),
                 ),
                 SizedBox(
